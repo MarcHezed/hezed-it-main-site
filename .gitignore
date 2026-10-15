@@ -1,0 +1,25 @@
+# Credentials and local provider state
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.openai/
+.vercel/
+# Generated files and dependencies
+node_modules/
+dist/
+build/
+coverage/
+__pycache__/
+*.pyc
+*.log
+*.tar
+*.tar.gz
+*.zip
+*.bak
+# Local editors and OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
