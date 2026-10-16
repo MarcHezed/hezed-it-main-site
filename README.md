@@ -9,7 +9,9 @@ Company website for SAP integration and development, commercial web development,
 
 ## Technology
 
-Semantic HTML, responsive CSS, vanilla JavaScript and an optimized WebP image. No framework, package installation, build step, database, analytics or runtime secrets. Email links open the visitor's mail application; the website does not send or store messages.
+Semantic HTML, responsive CSS, vanilla JavaScript and an optimized WebP image. No framework, package installation, build step, database, third-party analytics SDK or runtime secrets. Email links open the visitor's mail application; the website does not send or store messages.
+
+ChatGPT Sites records aggregate traffic automatically for the deployed Site. No analytics script is required in this repository. See [analytics operations](docs/ANALYTICS.md).
 
 ## Local preview
 
@@ -42,6 +44,7 @@ GitHub Actions runs these checks on pushes and pull requests. These are structur
 | `.github/workflows/validate.yml` | Continuous integration |
 | `docs/DEPLOYMENT.md` | Hosting, DNS, releases and rollback |
 | `docs/MAINTENANCE.md` | Editing and manual verification |
+| `docs/ANALYTICS.md` | Built-in ChatGPT Sites traffic analytics runbook |
 | `CONTRIBUTING.md` | Branch and pull request conventions |
 | `SECURITY.md` | Secret handling and private reporting |
 | `CHANGELOG.md` | Release history |
@@ -51,6 +54,12 @@ GitHub Actions runs these checks on pushes and pull requests. These are structur
 Serve **`public/`** as the static website root. See [deployment instructions](docs/DEPLOYMENT.md).
 
 This repository does not enable GitHub Pages or automatically synchronize with ChatGPT Sites. The current hosting repository remains separate. Future releases must explicitly synchronize approved GitHub source with the existing hosting checkout.
+
+## Analytics
+
+Traffic analytics are provided by ChatGPT Sites at the hosting layer. The owner can review unique visitors and page views over time from the Site's **More actions > Analytics** view. These metrics are not generated from GitHub and do not require a JavaScript tracker in `public/`.
+
+Do not add a third-party analytics SDK unless there is a separate approved requirement for deeper attribution or product analytics, including the related privacy and consent review.
 
 ## Accessibility and behavior
 
